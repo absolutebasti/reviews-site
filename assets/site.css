@@ -430,8 +430,10 @@ input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius
   }
   .swipe::-webkit-scrollbar { display: none; }
   .swipe > li { flex: 0 0 82%; scroll-snap-align: start; }
-  .swipe-hint { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 10px 0 0; font-size: 14px; font-weight: 500; color: var(--muted); }
-  .swipe-hint svg { width: 16px; height: 16px; }
+  .dots { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 12px 0 0; }
+  .dots:empty { display: none; }
+  .dots span { width: 8px; height: 8px; border-radius: 999px; background: var(--ink); opacity: .2; transition: width .25s var(--ease), opacity .25s var(--ease); }
+  .dots span.on { width: 26px; opacity: 1; }
 
   /* Rechner: Ergebnis über den Reglern, damit beides zusammen auf den Schirm passt */
   .calc { display: flex; flex-direction: column; }
@@ -442,6 +444,9 @@ input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius
   .field { margin-top: 6px; }
   .price-grid { gap: 32px; }
   .split .profile { transform: none; }
+
+  /* Fuß: Links als ruhiges Zweierraster statt umbrechender Zeile */
+  .footer nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; width: 100%; }
 
   /* Feste Kontaktleiste unten */
   .js .bar {
@@ -456,14 +461,13 @@ input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius
   .bar p { margin: 0; font-size: 13px; line-height: 1.25; }
   .bar strong { display: block; font: 700 17px/1.2 var(--display); letter-spacing: -0.01em; color: var(--sun); white-space: nowrap; }
   .bar .btn { height: 48px; padding: 0 18px; font-size: 16px; flex: none; background: var(--sun); color: var(--ink); border-color: var(--sun); }
-  .has-bar .footer { padding-bottom: calc(44px + 72px + env(safe-area-inset-bottom)); }
 }
 @media (max-width: 719px) and (prefers-reduced-motion: no-preference) {
   /* Einmal kurz anstupsen, damit man sieht: hier kann man wischen */
   .js .swipe.in > li { animation: nudge 1s var(--ease) 2s 1; }
 }
 @keyframes nudge { 35% { transform: translateX(-44px); } }
-@media (min-width: 720px) { .swipe-hint { display: none; } }
+@media (min-width: 720px) { .dots { display: none; } }
 @media (max-width: 419px) {
   .f1 { width: 76px; height: 76px; top: 44px; right: -30px; }
   .meter { --w: 84px; }

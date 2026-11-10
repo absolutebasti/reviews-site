@@ -84,10 +84,37 @@
         es.forEach(function (e) { past = !e.isIntersecting && e.boundingClientRect.top < 0; });
         sync();
       }).observe(heroCta);
-      new IntersectionObserver(function (es) {
-        es.forEach(function (e) { atEnd = e.isIntersecting; });
+      // Am Schluss (letzter Abschnitt oder Fuß im Bild) ist die Leiste weg, damit nichts verdeckt wird.
+      var endSeen = {};
+      var endIo = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { endSeen[e.target.className] = e.isIntersecting; });
+        atEnd = Object.keys(endSeen).some(function (k) { return endSeen[k]; });
         sync();
-      }, { threshold: 0.25 }).observe(fin);
+      }, { threshold: 0.05 });
+      endIo.observe(fin);
+      var foot = document.querySelector(".footer");
+      if (foot) endIo.observe(foot);
+    }
+
+    // Handy: Punkte unter der Wischreihe zeigen, welche Karte gerade vorn ist.
+    var sw = document.querySelector(".swipe");
+    var dots = document.querySelector(".dots");
+    if (sw && dots && sw.children.length > 1) {
+      var cards = sw.children;
+      for (var i = 0; i < cards.length; i++) dots.appendChild(document.createElement("span"));
+      var ticking = false;
+      var mark = function () {
+        ticking = false;
+        var step = cards[1].offsetLeft - cards[0].offsetLeft || 1;
+        var idx = Math.round(sw.scrollLeft / step);
+        if (sw.scrollLeft + sw.clientWidth >= sw.scrollWidth - 4) idx = cards.length - 1;
+        idx = Math.max(0, Math.min(cards.length - 1, idx));
+        for (var d = 0; d < dots.children.length; d++) dots.children[d].classList.toggle("on", d === idx);
+      };
+      sw.addEventListener("scroll", function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(mark); }
+      }, { passive: true });
+      mark();
     }
 
     var score = document.querySelector("[data-from]");
