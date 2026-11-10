@@ -6,23 +6,23 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Google-Bewertungen löschen lassen | Torch Reviews</title>
-<meta name="description" content="Wir kümmern uns um deine Google-Bewertungen: Unfaire Bewertungen lassen wir löschen, für 5 € pro gelöschter Bewertung. Für Restaurants und Geschäfte.">
+<meta name="description" content="Unfaire Google-Bewertung? Weg damit. Wir lassen Fakes, Beleidigungen und Erpresser-Bewertungen löschen. 5 € pro gelöschter Bewertung, nur bei Erfolg.">
 <link rel="canonical" href="https://reviews.torchtechnology.de/">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffc629">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Torch Reviews">
-<meta property="og:title" content="Wir kümmern uns um deine Google-Bewertungen">
-<meta property="og:description" content="Unfaire Bewertungen lassen wir löschen. 5 € pro gelöschter Bewertung, nur bei Erfolg.">
+<meta property="og:title" content="Unfaire Google-Bewertung? Weg damit.">
+<meta property="og:description" content="Wir lassen Fakes, Beleidigungen und Erpresser-Bewertungen löschen. 5 € pro gelöschter Bewertung, nur bei Erfolg.">
 <meta property="og:url" content="https://reviews.torchtechnology.de/">
 <meta property="og:image" content="https://reviews.torchtechnology.de/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -87,6 +87,7 @@
   <symbol id="i-qr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
   <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+  <symbol id="i-stk" viewBox="0 0 24 24"><path d="M12 3.2l2.72 5.52 6.08.88-4.4 4.29 1.04 6.06L12 17.1l-5.44 2.85 1.04-6.06-4.4-4.29 6.08-.88z"/></symbol>
 </svg>
 
 <a class="skip" href="#inhalt">Zum Inhalt</a>
@@ -98,36 +99,45 @@
       <span class="logo-word">Torch <span>Reviews</span></span>
     </a>
     <nav class="nav" aria-label="Seitenbereiche">
-      <a href="#loeschen">Löschen</a>
+      <a href="#loeschen">Was fliegt raus</a>
       <a href="#preis">Preis</a>
       <a href="#ablauf">Ablauf</a>
       <a href="#fragen">Fragen</a>
     </nav>
-    <a class="btn btn-primary" href="mailto:hello@torchtechnology.de?subject=Bewertung%20pr%C3%BCfen%20lassen&amp;body=Hallo%20Torch-Team%2C%0D%0A%0D%0ALink%20zu%20meinem%20Google-Profil%3A%0D%0A%0D%0ADiese%20Bewertung%28en%29%20st%C3%B6ren%20mich%3A%0D%0A%0D%0ATelefon%20f%C3%BCr%20R%C3%BCckfragen%20%28optional%29%3A%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe"><span class="cta-long">Bewertung prüfen lassen</span><span class="cta-short">Anfragen</span></a>
+    <a class="btn btn-ink" href="mailto:hello@torchtechnology.de?subject=Bewertung%20pr%C3%BCfen%20lassen&amp;body=Hallo%20Torch-Team%2C%0D%0A%0D%0ALink%20zu%20meinem%20Google-Profil%3A%0D%0A%0D%0ADiese%20Bewertung%28en%29%20st%C3%B6ren%20mich%3A%0D%0A%0D%0ATelefon%20f%C3%BCr%20R%C3%BCckfragen%20%28optional%29%3A%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe"><span class="cta-long">Bewertung prüfen lassen</span><span class="cta-short">Anfragen</span></a>
   </div>
 </header>
 
 <main id="inhalt">
 
   <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap">
-      <p class="kicker">Für Restaurants und Geschäfte</p>
-      <span class="stars big r5" role="img" aria-label="Fünf Sterne"></span>
-      <h1 id="hero-title">Wir kümmern uns um deine Google-Bewertungen.</h1>
-      <p class="lead">Unfaire Bewertungen lassen wir löschen. Auf alle anderen antworten wir für dich.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="mailto:hello@torchtechnology.de?subject=Bewertung%20pr%C3%BCfen%20lassen&amp;body=Hallo%20Torch-Team%2C%0D%0A%0D%0ALink%20zu%20meinem%20Google-Profil%3A%0D%0A%0D%0ADiese%20Bewertung%28en%29%20st%C3%B6ren%20mich%3A%0D%0A%0D%0ATelefon%20f%C3%BCr%20R%C3%BCckfragen%20%28optional%29%3A%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe">Bewertung prüfen lassen<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-ghost" href="#ablauf">So läuft es</a>
+    <span class="float f1" aria-hidden="true"><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg></span>
+    <span class="float f2" aria-hidden="true"><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg></span>
+    <span class="float f3" aria-hidden="true"><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg></span>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="tag">Für Restaurants, Imbisse und Läden</p>
+        <div class="bigstars" role="img" aria-label="Fünf Sterne"><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg></div>
+        <h1 id="hero-title">Unfaire Google-Bewertung? <span class="hl">Weg damit.</span></h1>
+        <p class="lead">Wir lassen Fakes, Beleidigungen und Erpresser-Bewertungen löschen. <strong>5 € pro gelöschter Bewertung</strong>, und nur wenn sie wirklich weg ist.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-ink" href="mailto:hello@torchtechnology.de?subject=Bewertung%20pr%C3%BCfen%20lassen&amp;body=Hallo%20Torch-Team%2C%0D%0A%0D%0ALink%20zu%20meinem%20Google-Profil%3A%0D%0A%0D%0ADiese%20Bewertung%28en%29%20st%C3%B6ren%20mich%3A%0D%0A%0D%0ATelefon%20f%C3%BCr%20R%C3%BCckfragen%20%28optional%29%3A%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe">Bewertung prüfen lassen<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-white" href="#preis">Selbst ausrechnen</a>
+        </div>
+        <ul class="trust">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zahlen nur bei Erfolg</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Kein Passwort nötig</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Ehrliche Kritik bleibt</li>
+        </ul>
       </div>
-      <p class="price-line"><strong>5 € pro gelöschter Bewertung.</strong> Du zahlst nur bei Erfolg.</p>
 
-      <figure class="mock" aria-label="Beispiel: Zwei unfaire Bewertungen werden gelöscht, die Wertung steigt von 4,2 auf 4,9 Sterne">
+      <figure class="mock" aria-label="Beispiel: Zwei unfaire Bewertungen werden gelöscht, die Wertung steigt von 4,2 auf 4,8 Sterne">
         <figcaption class="mock-label">Beispiel</figcaption>
         <div class="profile">
           <div class="profile-head">
-            <div><strong>Dein Restaurant</strong><small>Bewertungen bei Google</small></div>
+            <div><strong>Dein Laden</strong><small>Google-Bewertungen</small></div>
             <div class="score" aria-hidden="true">
-              <span class="score-num"><span class="before">4,2</span><span class="after">4,9</span></span>
+              <span class="score-num" data-from="4.2" data-to="4.8">4,8</span>
               <span class="stars meter"></span>
             </div>
           </div>
@@ -135,36 +145,40 @@
             <li class="rev bad d1">
               <span class="avatar" aria-hidden="true">A</span>
               <div class="rev-body">
-                <div class="rev-top"><strong>Anonym</strong><span class="stars r1" role="img" aria-label="1 von 5 Sternen"></span><span class="pill"><svg aria-hidden="true"><use href="#i-check"/></svg>Gelöscht</span></div>
+                <div class="rev-top"><strong>Anonym</strong><span class="stars r1" role="img" aria-label="1 von 5 Sternen"></span></div>
                 <p class="quote">„War selbst nie da, aber man hört ja von Ratten in der Küche.“</p>
               </div>
+              <span class="stamp">Gelöscht</span>
             </li>
             <li class="rev bad d2">
               <span class="avatar" aria-hidden="true">N</span>
               <div class="rev-body">
-                <div class="rev-top"><strong>Nutzer 2291</strong><span class="stars r1" role="img" aria-label="1 von 5 Sternen"></span><span class="pill"><svg aria-hidden="true"><use href="#i-check"/></svg>Gelöscht</span></div>
+                <div class="rev-top"><strong>Nutzer 2291</strong><span class="stars r1" role="img" aria-label="1 von 5 Sternen"></span></div>
                 <p class="quote">„100 € Gutschein, dann lösche ich das hier.“</p>
               </div>
+              <span class="stamp">Gelöscht</span>
             </li>
             <li class="rev">
               <span class="avatar" aria-hidden="true">M</span>
               <div class="rev-body">
                 <div class="rev-top"><strong>Maria</strong><span class="stars r5" role="img" aria-label="5 von 5 Sternen"></span></div>
-                <p class="quote">„Beste Pasta weit und breit. Wir kommen wieder.“</p>
+                <p class="quote">„Bester Döner der Stadt. Wir kommen wieder.“</p>
               </div>
             </li>
           </ul>
         </div>
-        <p class="mock-foot">Rechenbeispiel: 25 Bewertungen, 4 Fakes gelöscht. Aus 4,2 werden 4,9 Sterne.</p>
+        <p class="mock-foot">Rechenbeispiel: 25 Bewertungen, 4 Fakes gelöscht. Aus 4,2 werden 4,8 Sterne.</p>
       </figure>
     </div>
   </section>
 
+  <div class="ticker" aria-hidden="true"><div class="ticker-track"><div class="ticker-set"><span>Fake-Bewertungen<svg><use href="#i-stk"/></svg></span><span>Beleidigungen<svg><use href="#i-stk"/></svg></span><span>Erpressung<svg><use href="#i-stk"/></svg></span><span>Falsche Behauptungen<svg><use href="#i-stk"/></svg></span><span>Spam<svg><use href="#i-stk"/></svg></span><span>Hass und Hetze<svg><use href="#i-stk"/></svg></span><span>Nie da gewesen<svg><use href="#i-stk"/></svg></span></div><div class="ticker-set"><span>Fake-Bewertungen<svg><use href="#i-stk"/></svg></span><span>Beleidigungen<svg><use href="#i-stk"/></svg></span><span>Erpressung<svg><use href="#i-stk"/></svg></span><span>Falsche Behauptungen<svg><use href="#i-stk"/></svg></span><span>Spam<svg><use href="#i-stk"/></svg></span><span>Hass und Hetze<svg><use href="#i-stk"/></svg></span><span>Nie da gewesen<svg><use href="#i-stk"/></svg></span></div><div class="ticker-set"><span>Fake-Bewertungen<svg><use href="#i-stk"/></svg></span><span>Beleidigungen<svg><use href="#i-stk"/></svg></span><span>Erpressung<svg><use href="#i-stk"/></svg></span><span>Falsche Behauptungen<svg><use href="#i-stk"/></svg></span><span>Spam<svg><use href="#i-stk"/></svg></span><span>Hass und Hetze<svg><use href="#i-stk"/></svg></span><span>Nie da gewesen<svg><use href="#i-stk"/></svg></span></div><div class="ticker-set"><span>Fake-Bewertungen<svg><use href="#i-stk"/></svg></span><span>Beleidigungen<svg><use href="#i-stk"/></svg></span><span>Erpressung<svg><use href="#i-stk"/></svg></span><span>Falsche Behauptungen<svg><use href="#i-stk"/></svg></span><span>Spam<svg><use href="#i-stk"/></svg></span><span>Hass und Hetze<svg><use href="#i-stk"/></svg></span><span>Nie da gewesen<svg><use href="#i-stk"/></svg></span></div></div></div>
+
   <section class="section" id="loeschen" aria-labelledby="loeschen-title">
     <div class="wrap">
       <div class="center reveal">
-        <p class="kicker">Das lassen wir löschen</p>
-        <h2 id="loeschen-title">Diese Bewertungen müssen weg.</h2>
+        <p class="tag sun">Das lassen wir löschen</p>
+        <h2 id="loeschen-title">Das fliegt raus.</h2>
         <p class="sub">Alles, was gegen Googles Richtlinien verstößt. Zum Beispiel:</p>
       </div>
       <ul class="grid grid-3 swipe ex-grid plain reveal" role="list">
@@ -175,29 +189,41 @@
         <li><div class="ex"><div class="ex-top"><span class="chip">Erpressung</span><span class="stars r1" role="img" aria-label="1 von 5 Sternen"></span></div><p class="quote">„100 € Gutschein, dann lösche ich das hier.“</p></div></li>
         <li><div class="ex"><div class="ex-top"><span class="chip">Spam</span><span class="stars r1" role="img" aria-label="1 von 5 Sternen"></span></div><p class="quote">„Schnell Geld verdienen? Schreib mir auf Telegram.“</p></div></li>
       </ul>
-      <p class="after-grid reveal"><strong>Ehrliche Kritik bleibt.</strong> Darauf antworten wir für dich.</p>
+      <p class="after-grid reveal"><strong>Ehrliche Kritik bleibt stehen.</strong> Darauf antworten wir für dich.</p>
     </div>
   </section>
 
-  <section class="section sand" id="preis" aria-labelledby="preis-title">
-    <div class="wrap narrow">
-      <div class="center reveal">
-        <p class="kicker">Preis</p>
+  <section class="section sun" id="preis" aria-labelledby="preis-title">
+    <div class="wrap price-grid">
+      <div class="reveal">
+        <p class="tag">Preis</p>
         <h2 id="preis-title">Du zahlst nur bei Erfolg.</h2>
+        <div class="price-row">
+          <div class="burst"><b>5 €</b></div>
+          <div>
+            <p class="price-unit">pro gelöschter Bewertung</p>
+            <p class="price-note">Netto, zzgl. USt.</p>
+          </div>
+        </div>
+        <ul class="ticks">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Keine Löschung, keine Kosten</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Keine Grundgebühr, kein Abo</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Ehrliche Einschätzung vorab</li>
+        </ul>
       </div>
-      <div class="price reveal">
-        <div>
-          <p class="price-num">5 €</p>
-          <p class="price-unit">pro gelöschter Bewertung</p>
-          <p class="price-note">Netto, zzgl. USt.</p>
+      <div class="calc reveal">
+        <h3>Rechne selbst</h3>
+        <p class="calc-hint">Was bringt es, wenn die unfairen Bewertungen weg sind?</p>
+        <div class="calc-inputs" hidden>
+          <div class="field"><label for="c-avg">Deine Wertung heute <output id="o-avg" for="c-avg">4,2</output></label><input type="range" id="c-avg" min="10" max="50" step="1" value="42"></div>
+          <div class="field"><label for="c-n">Bewertungen insgesamt <output id="o-n" for="c-n">25</output></label><input type="range" id="c-n" min="5" max="200" step="1" value="25"></div>
+          <div class="field"><label for="c-k">Davon unfaire 1-Sterne <output id="o-k" for="c-k">4</output></label><input type="range" id="c-k" min="0" max="5" step="1" value="4"></div>
         </div>
-        <div class="price-side">
-          <ul class="ticks">
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Keine Löschung, keine Kosten</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Keine Grundgebühr, kein Abo</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Ehrliche Einschätzung vorab</li>
-          </ul>
+        <div class="result" aria-live="polite">
+          <div class="win"><small>Deine neue Wertung</small><b id="r-new">4,8</b><span class="stars" id="r-stars"></span><em id="r-gain">+0,6 Sterne</em></div>
+          <div><small>Das kostet es</small><b id="r-cost">20 €</b><em id="r-note">für 4 gelöschte Bewertungen</em></div>
         </div>
+        <p class="calc-note">Rechenbeispiel für den Fall, dass alle gemeldeten Bewertungen gelöscht werden. Ob eine Bewertung fällt, entscheidet Google.</p>
       </div>
     </div>
   </section>
@@ -205,22 +231,22 @@
   <section class="section" id="ablauf" aria-labelledby="ablauf-title">
     <div class="wrap">
       <div class="center reveal">
-        <p class="kicker">Ablauf</p>
-        <h2 id="ablauf-title">In drei Schritten erledigt.</h2>
+        <p class="tag sun">Ablauf</p>
+        <h2 id="ablauf-title">So einfach geht's.</h2>
       </div>
-      <ol class="grid grid-3 plain reveal">
-        <li><div class="card"><span class="num" aria-hidden="true">1</span><h3>Link schicken</h3><p>Dein Google-Profil und die Bewertungen, die dich stören.</p></div></li>
-        <li><div class="card"><span class="num" aria-hidden="true">2</span><h3>Wir prüfen</h3><p>Du hörst ehrlich, was Aussicht hat und was nicht.</p></div></li>
-        <li><div class="card"><span class="num" aria-hidden="true">3</span><h3>Wir melden</h3><p>Und bleiben dran, bis Google entschieden hat.</p></div></li>
+      <ol class="steps plain reveal">
+        <li class="step"><span class="num" aria-hidden="true">1</span><h3>Link schicken</h3><p>Dein Google-Profil und die Bewertungen, die dich stören.</p></li>
+        <li class="step"><span class="num" aria-hidden="true">2</span><h3>Wir prüfen</h3><p>Du hörst ehrlich, was Aussicht hat und was nicht.</p></li>
+        <li class="step"><span class="num" aria-hidden="true">3</span><h3>Wir melden</h3><p>Und bleiben dran, bis Google entschieden hat.</p></li>
       </ol>
       <p class="after-grid reveal"><strong>Dein Passwort brauchen wir nie.</strong></p>
     </div>
   </section>
 
-  <section class="section" id="pflege" aria-labelledby="pflege-title">
+  <section class="section soft" id="pflege" aria-labelledby="pflege-title">
     <div class="wrap split">
       <div class="reveal">
-        <p class="kicker">Bewertungen pflegen</p>
+        <p class="tag">Bewertungen pflegen</p>
         <h2 id="pflege-title">Mehr echte Sterne.</h2>
         <p class="sub">Gute Antworten und mehr Stimmen zufriedener Gäste.</p>
         <ul class="feats">
@@ -237,8 +263,8 @@
               <span class="avatar" aria-hidden="true">M</span>
               <div class="rev-body">
                 <div class="rev-top"><strong>Maria</strong><span class="stars r5" role="img" aria-label="5 von 5 Sternen"></span></div>
-                <p class="quote">„Beste Pasta weit und breit. Wir kommen wieder.“</p>
-                <div class="reply"><strong>Antwort vom Inhaber</strong>Danke, Maria! Das geben wir an die Küche weiter. Bis bald.</div>
+                <p class="quote">„Bester Döner der Stadt. Wir kommen wieder.“</p>
+                <div class="reply"><strong>Antwort vom Inhaber</strong>Danke, Maria! Das geben wir ans Team weiter. Bis bald.</div>
               </div>
             </li>
             <li class="rev">
@@ -254,10 +280,10 @@
     </div>
   </section>
 
-  <section class="section sand" id="hass" aria-labelledby="hass-title">
+  <section class="section dark" id="hass" aria-labelledby="hass-title">
     <div class="wrap">
       <div class="center reveal">
-        <p class="kicker">Gegen Hass und Hetze</p>
+        <p class="tag sun">Gegen Hass und Hetze</p>
         <h2 id="hass-title">Das musst du nicht aushalten.</h2>
         <p class="sub">Rassistische Kommentare, Drohungen, Shitstorm. Wir nehmen dir die Arbeit ab.</p>
       </div>
@@ -272,7 +298,7 @@
   <section class="section" id="fragen" aria-labelledby="fragen-title">
     <div class="wrap narrow">
       <div class="center reveal">
-        <p class="kicker">Fragen</p>
+        <p class="tag sun">Fragen</p>
         <h2 id="fragen-title">Gut zu wissen.</h2>
       </div>
       <div class="faq">
@@ -301,11 +327,13 @@
   </section>
 
   <section class="final" aria-labelledby="final-title">
+    <span class="float f4" aria-hidden="true"><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg></span>
+    <span class="float f5" aria-hidden="true"><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg></span>
     <div class="wrap reveal">
-      <span class="stars big r5" role="img" aria-label="Fünf Sterne"></span>
-      <h2 id="final-title">Welche Bewertung stört dich?</h2>
+      <div class="bigstars" role="img" aria-label="Fünf Sterne"><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg><svg class="stk" aria-hidden="true"><use href="#i-stk"/></svg></div>
+      <h2 id="final-title">Welche Bewertung nervt dich?</h2>
       <p class="sub">Schick uns den Link. Du zahlst nur, wenn sie weg ist.</p>
-      <a class="btn" href="mailto:hello@torchtechnology.de?subject=Bewertung%20pr%C3%BCfen%20lassen&amp;body=Hallo%20Torch-Team%2C%0D%0A%0D%0ALink%20zu%20meinem%20Google-Profil%3A%0D%0A%0D%0ADiese%20Bewertung%28en%29%20st%C3%B6ren%20mich%3A%0D%0A%0D%0ATelefon%20f%C3%BCr%20R%C3%BCckfragen%20%28optional%29%3A%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe">Bewertung prüfen lassen<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ink" href="mailto:hello@torchtechnology.de?subject=Bewertung%20pr%C3%BCfen%20lassen&amp;body=Hallo%20Torch-Team%2C%0D%0A%0D%0ALink%20zu%20meinem%20Google-Profil%3A%0D%0A%0D%0ADiese%20Bewertung%28en%29%20st%C3%B6ren%20mich%3A%0D%0A%0D%0ATelefon%20f%C3%BCr%20R%C3%BCckfragen%20%28optional%29%3A%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe">Bewertung prüfen lassen<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <p class="final-note">Oder schreib uns an <a href="mailto:hello@torchtechnology.de">hello@torchtechnology.de</a></p>
     </div>
   </section>
