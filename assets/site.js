@@ -73,6 +73,23 @@
 
     calculator();
 
+    // Handy: Kontaktleiste unten zeigen, sobald der Knopf oben weggescrollt ist; am Schluss wieder weg.
+    var bar = document.querySelector(".bar");
+    var heroCta = document.querySelector(".hero-ctas");
+    var fin = document.querySelector(".final");
+    if (bar && heroCta && fin && hasIO) {
+      var past = false, atEnd = false;
+      var sync = function () { bar.classList.toggle("on", past && !atEnd); };
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { past = !e.isIntersecting && e.boundingClientRect.top < 0; });
+        sync();
+      }).observe(heroCta);
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) { atEnd = e.isIntersecting; });
+        sync();
+      }, { threshold: 0.25 }).observe(fin);
+    }
+
     var score = document.querySelector("[data-from]");
     var animate = hasIO && !calm;
     if (score && animate) score.textContent = fmt(parseFloat(score.getAttribute("data-from")));
